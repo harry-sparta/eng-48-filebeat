@@ -22,3 +22,8 @@ end
 execute 'restart Filebeat' do
   command 'sudo /etc/init.d/filebeat restart'
 end
+
+execute 'filebeat_enable' do
+  command 'sudo systemctl enable filebeat'
+  action :run
+end
